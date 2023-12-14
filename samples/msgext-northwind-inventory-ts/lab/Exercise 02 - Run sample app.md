@@ -18,13 +18,13 @@ Teams Toolkit stores environment variables in the **env** folder, and it will fi
 
 In this project, the Northwind database is stored in Azure Table Storage; when you're debugging locally, it uses the [Azurite](https://learn.microsoft.com/azure/storage/common/storage-use-azurite?tabs=visual-studio) storage emulator. That's mostly built into the project, but the project won't build unless you provide the connection string.
 
-The necessary setting is provided in a file **env/.env.local.user.sample**. Make a copy of this file in the **env** folder, and call it **.env.local.user**. This is where secret or sensitive settings are stored.
+The necessary setting is provided in a file **env/.env.local.sample**. Make a copy of this file in the **env** folder, and call it **.env.local.user.sample**. This is where secret or sensitive settings are stored.
 
-If you're not sure how to do this, here are the steps in Visual Studio Code. Expand the **env** folder and right click on **.env.local.user.sample**. Select "Copy". Then right click anywhere in the **env** folder and select "Paste". You will have a new file called **.env.local.user copy.sample**. Use the same context menu to rename the file to **.env.local.user** and you're done.
+If you're not sure how to do this, here are the steps in Visual Studio Code. Expand the **env** folder and right click on **.env.local.sample**. Select "Copy". Then right click anywhere in the **env** folder and select "Paste". You will have a new file called **.env.local.sample copy**. Use the same context menu to rename the file to **.env.local.user.sample** and you're done.
 
-![Copy .env.local.user.sample to .env.local.user](./images/02-01-Setup-Project-01.png)
+![Copy .env.local.sample to .env.local.user.sample](./images/02-01-Setup-Project-01.png)
 
-The resulting **.env.local.user** file should contain this line:
+The resulting **.env.local.user.sample** file should contain this line:
 
 ~~~text
 SECRET_STORAGE_ACCOUNT_CONNECTION_STRING=UseDevelopmentStorage=true
